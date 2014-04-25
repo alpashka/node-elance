@@ -1,7 +1,7 @@
 {
   "name": "node-elance",
   "description": "Node.JS bindings for Elance API",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Artem Gnilov",
     "email": "boobsd@gmail.com"
@@ -31,11 +31,10 @@
   ],
   "engines": {
     "node": "*"
-  },
-  "readme": "===========\nNode-Elance\n===========\n\nNode.JS bindings for Elance API\n\nInstallation\n============\n\nTo install node-elance please run the following command::\n\n    $ npm install node-elance\n\nUsage\n=====\n\nQuick start\n-----------\n\nBefore you may use oDesk APIs, you will need to obtain your pair of API keys.\nVisit the `oDesk API Center documentation <http://developers.elance.com/Authentication#authentication>`_\nfor full details. Please note, that Node-oDesk uses authorization via OAuth and it needs keys with auth type \"OAuth\".\n\nInitializing the client::\n\n    var elance = require('node-elance');\n    var o = new elance(key, secret);\n\nShows the authorization url::\n\n    o.OAuth.getAuthorizeUrl(function(error, url, requestToken, requestTokenSecret) {\n        console.log(url, requestToken, requestTokenSecret);\n    });\n\nAlso you may specify your custom callback url for authorize url::\n\n    o.OAuth.getAuthorizeUrl('http://example.com/complete', function(error, url, requestToken, requestTokenSecret) {\n        console.log(url, requestToken, requestTokenSecret);\n    });\n\nGetting accessToken::\n\n    o.OAuth.getAccessToken(requestToken, requestTokenSecret, verifier, function(error, accessToken, accessTokenSecret) {\n        console.log(accessToken, accessTokenSecret);\n    });\n\nSet accessToken::\n\n    o.OAuth.accessToken = accessToken;\n    o.OAuth.accessTokenSecret = accessTokenSecret;\n\nGet user info from oDesk API::\n\n    o.get('auth/v1/info', function(error, data) {\n        console.log(error || data);\n    });\n\nAlso you can use POST, PUT or DELETE methods::\n\n    o.put('team/v1/snapshots/<company>/<username>/<timestamp>', {memo: \"Testing...\"}, function(error, data) {\n        console.log(error || data);\n    });\n",  
+  },  
   "bugs": {
     "url": "https://github.com/paulsamchuk/node-elance/issues"
   },
-  "_id": "node-elance@0.0.1",
+  "_id": "node-elance@0.0.2",
   "_from": "node-elance@"
 }
