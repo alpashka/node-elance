@@ -1,7 +1,7 @@
 {
   "name": "node-elance",
   "description": "Node.JS bindings for Elance API",
-  "version": "0.0.2",
+  "version": "0.0.3a",
   "author": {
     "name": "Artem Gnilov",
     "email": "boobsd@gmail.com"
