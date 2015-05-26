@@ -1,5 +1,5 @@
-var key = process.env.K
-  , secret = process.env.S
+var key = process.env.KEY
+  , secret = process.env.SECRET
   , callbackUrl = ''
   , Elance = require('../')
   , rl = require('readline')
