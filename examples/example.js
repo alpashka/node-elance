@@ -29,7 +29,7 @@ i.question("Enter oauth_verifier: ", function(code) {
     elance.OAuth2.accessToken = accessToken;
     elance.OAuth2.accessTokenSecret = accessTokenSecret;
     
-    elance.OAuth2.getRefreshAccessToken(accessTokenSecret, function(err, accessToken, accessTokenSecret, expiresIn){
+    elance.OAuth2.refreshAccessToken(accessTokenSecret, function(err, accessToken, accessTokenSecret, expiresIn){
 
       if (err) throw err;
       
