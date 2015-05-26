@@ -12,7 +12,7 @@ To install node-elance please run the following command:
 
 Usage
 =======
-Look into examples/example.js
+Look into `KEY='' SECRET='' examples/example.js`
 
 
 Acknowledgment
